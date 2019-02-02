@@ -1,9 +1,8 @@
 //Variable declaration
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+
 
 const spell = document.getElementsByClassName('spell')[0];
-const containers = document.getElementsByClassName('holder');
+const containers = document.getElementsByClassName('container');
 
 for(const container of containers){
     container.addEventListener("dragover", dragover);

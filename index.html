@@ -2,23 +2,26 @@
 <html>
 <head>
         <meta charset="utf-8" />
-        <title>Canvas Workshop</title>
-        <style>
-            * { padding: 0; margin: 0; }
-            canvas { background: #eee; display: block; margin: 0 auto; }
+        <title>The Magic of Code</title>
+
+        <link rel="stylesheet" type = "text/css" href="spellbook-stylesheet.css">
         </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="480" height="320">
-        <div class="caster">
-            <div class = "container"></div>
+    <div class = "row">
+    <!-- This is where we will create the canvas -->
+    </div>
+    <!--These columns will be auto-sorting, so they may appear next to or atop e.o.-->
+    <div class = "row">
+        <!--This is the place where content will be "dropped" and validated-->
+        <div class = "col" id="spell-cast">
         </div>
-        <div class="spellbook">
-            <div class = "container">
-                <div class = "spell" draggable = "true">healTree(             )</div>
-            </div>
-         </div>
-    </canvas>
-    <script src="bouncy-game.js"></script>
+        <!-- This is the place where content is stored until it's dragged+dropped-->
+        <div class = "col" id="spell-book">
+        </div>
+    </div>
+
+    <script src="spell-caster.js"></script>
+
 </body>
 </html>
