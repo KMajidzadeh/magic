@@ -1,0 +1,12 @@
+#zone-3{
+    min-width: 115px;
+}
+.spell-text{
+    min-height: 10px;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+}
+.spell-text .dropzone{
+    min-height: 30px;
+}

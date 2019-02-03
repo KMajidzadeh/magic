@@ -100,7 +100,7 @@ document.addEventListener("dragover", function(event) {
 var modal = document.getElementById("modal");
 var modalContent = document.getElementById("modal-content");
 
-function validateLevelOne(){
+function validateLevel(){
  
     try{
         var a = document.getElementById("zone-1").firstChild.id;
@@ -110,7 +110,7 @@ function validateLevelOne(){
         var x = document.getElementById("spell-1");
         var y = document.getElementById("spell-2");
         var z = document.getElementById("spell-3");
-        
+
         if(a == "spell-1" && b == "spell-2" && c == "spell-3"){
             modalOutput("Congratulations! You saved the tree by calling out the spell HealTree(Oak); ")
             return true;

@@ -39,7 +39,6 @@
     display: inline-flex;
 }
 .entered-dropzone{
-    min-width: 75px;
     background-color: #9e688ee8;
 }
 

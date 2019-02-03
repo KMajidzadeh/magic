@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>The Magic of Code</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type = "text/css" href="spellbook-stylesheet.css">
+        <link rel="stylesheet" type = "text/css" href="level-two-extra.css">
+        </style>
+</head>
+<body>
+
+    <div class = "container">
+        <div class = "row">
+             <!-- This is where we will create the canvas -->
+         </div>
+        <!--These columns will be auto-sorting, so they may appear next to or atop e.o.-->
+        <div class = "row">
+            <div class = "col" id = "event-text">
+                <h3>As you continue on your journey, you notice that an entire <strong>Forest</strong> of <strong> Oak </strong> trees has been cut down! Is there a way to heal all of them by using the same spell?</h3>
+            </div>
+        </div>
+        <div class = "row">
+            <!--This is the place where content will be "dropped" and validated-->
+            <div class = "col" id="spell-cast">
+                <span class = "spell-text">
+                For(<div class="dropzone" id = "zone-1"></div> in 
+                <div class="dropzone" id="zone-2"></div> )
+                {<div class="dropzone" id="zone-3"></div>}
+                </span>
+                <button class="button" onclick="validateLevel()">Cast Spell</button>
+            </div>
+            <!-- This is the place where content is stored until it's dragged+dropped-->
+            <div class = "col" id="spell-book">
+                <div class="spell-dock"> 
+                    <div class="spell" draggable="true" id = "spell-1" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
+                        Oak 
+                      </div> 
+                </div> 
+                <div class = "spell-dock">
+                    <div class="spell" draggable="true" id="spell-3" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                        healTree(Oak);
+                    </div>
+                </div>
+                <div class = "spell-dock">
+                    <div class="spell" draggable="true" id="spell-2" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                    Forest
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id = "modal" class = "modal">
+            <div id="modal-content">
+                <span class="close">&times;</span>
+            </div>
+        </div>
+        <div class = "row" id = "hint">
+            <div class = "col">
+                <p>Hint: Try <i>dragging</i> and <i>dropping</i> your spells into the right containers!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="spell-caster.js"></script>
+
+</body>
+</html>
