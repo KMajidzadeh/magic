@@ -12,23 +12,24 @@ document.addEventListener("drag", function( event ) {
 
 document.addEventListener("dragstart", function( event ) {
     // store a reference on the dragged elem
-    dragged = event.target;
-    
-    //being-dragged CSS sets style
-    event.target.className == "spell-dragging";
+    if ( event.target.className == "spell" ) {
+        dragged = event.target;
+        //being-dragged CSS sets style
+        event.target.id = "spell-dragging"
+    }   
 //       // make it half transparent
 //       event.target.style.opacity = .5;
 }, false);
 
 document.addEventListener("dragend", function( event ) {
     // reset the transparency
-    if ( event.target.className == "spell-dragging" ) {
-        event.target.className == "spell-dropped";
+    if ( event.target.id == "spell-dragging" ) {
+        event.target.removeAttribute('spell-dragging');
     }
 }, false);
 
 /* events fired on the drop targets */
-  document.addEventListener("dragover", function( event ) {
+document.addEventListener("dragover", function( event ) {
           // prevent default to allow drop
           event.preventDefault();
 }, false);
@@ -37,7 +38,7 @@ document.addEventListener("dragend", function( event ) {
 document.addEventListener("dragenter", function( event ) {
       // highlight potential drop target when the draggable element enters it
       if ( event.target.className == "dropzone" ) {
-          event.target.className == "entered-dropzone";
+          event.target.className = "entered-dropzone";
       } 
 }, false);
 
@@ -59,22 +60,19 @@ document.addEventListener("drop", function( event ) {
         
 }, false);
 
-for(const container of containers){
-    container.addEventListener("dragover", dragover);
-    container.addEventListener("dragenter", dragenter);
-    container.addEventListener("drop", drop);
-}
+// for(const container of containers){
+//     container.addEventListener("dragover", dragover);
+//     container.addEventListener("dragenter", dragenter);
+//     container.addEventListener("drop", drop);
+// }
 
-function dragover(e){
+// function dragover(e){
 
-    e.preventDefault()
-}
-function dragenter(e){
-    e.preventDefault()
-}
-function drop(){
-    this.append(box)
-}
-
-
-setInterval(draw, 10);
+//     e.preventDefault()
+// }
+// function dragenter(e){
+//     e.preventDefault()
+// }
+// function drop(){
+//     this.append(spell)
+// }
