@@ -42,6 +42,7 @@
     background-color: #9e688ee8;
 }
 
+/* buttons */
 /* Cast Spell Button */
 .button{
     color: #F2D0B7;
@@ -51,6 +52,12 @@
     margin: 20px;
     margin-left: 15px;
     margin-right: 5px;
+}
+/*Progress Game Button*/
+#progress-level{
+    font-size: large;
+    display: none;
+    padding: 10px;
 }
 
 /* Bad input return */

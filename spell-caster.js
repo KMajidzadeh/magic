@@ -107,12 +107,10 @@ function validateLevel(){
         var b = document.getElementById("zone-2").firstChild.id;
         var c = document.getElementById("zone-3").firstChild.id;
 
-        var x = document.getElementById("spell-1");
-        var y = document.getElementById("spell-2");
-        var z = document.getElementById("spell-3");
-
         if(a == "spell-1" && b == "spell-2" && c == "spell-3"){
             modalOutput("Congratulations! You saved the tree by calling out the spell HealTree(Oak); ")
+            var button = document.getElementById("progress-level");
+            button.style.display = "block";
             return true;
         }else{
             modalOutput("This was not the correct spell! Please try again");
