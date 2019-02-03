@@ -24,27 +24,33 @@
         <div class = "row">
             <!--This is the place where content will be "dropped" and validated-->
             <div class = "col" id="spell-cast">
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
-                <div class="dropzone"></div>
+                <div class="dropzone" id = "zone-1"></div>
+                <div class="dropzone" id="zone-2"></div>
+                <div class="dropzone" id="zone-3"></div>
+                <button class="button" onclick="validateLevelOne()">Cast Spell</button>
             </div>
             <!-- This is the place where content is stored until it's dragged+dropped-->
             <div class = "col" id="spell-book">
                 <div class="spell-dock"> 
-                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
+                    <div class="spell" draggable="true" id = "spell-3" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
                         ); 
                       </div> 
                 </div> 
                 <div class = "spell-dock">
-                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                    <div class="spell" draggable="true" id="spell-1" ondragstart="event.dataTransfer.setData('text/plain',null)">
                         healTree(
                     </div>
                 </div>
                 <div class = "spell-dock">
-                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                    <div class="spell" draggable="true" id="spell-2" ondragstart="event.dataTransfer.setData('text/plain',null)">
                     Oak
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id = "modal" class = "modal">
+            <div id="modal-content">
+                <span class="close">&times;</span>
             </div>
         </div>
         <div class = "row" id = "hint">
