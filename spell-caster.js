@@ -110,20 +110,24 @@ function validateLevelOne(){
         var x = document.getElementById("spell-1");
         var y = document.getElementById("spell-2");
         var z = document.getElementById("spell-3");
+        
         if(a == "spell-1" && b == "spell-2" && c == "spell-3"){
-            modalContent.append("Congratulations! You saved the tree by casting the spell HealTree(Oak); ");
-            modal.style.display = "block"; 
+            modalOutput("Congratulations! You saved the tree by calling out the spell HealTree(Oak); ")
             return true;
         }else{
-            modalContent.append("This was not the correct spell! Please try again");
-            modal.style.display = "block";
+            modalOutput("This was not the correct spell! Please try again");
             return false;
         }
     }catch(err){
-        modalContent.append("You must fill in all the blanks! Please try again");
-        modal.style.display = "block";
+        modalOutput("You must fill in all the blanks! Please try again");
         return false;
     }
+}
+/*Opening a modal with input */
+function modalOutput(text){
+    modalContent.append(text);
+    modal.style.display = "block";
+    return false;   
 }
 /* Closing that annoying modal from earlier*/
 var span = document.getElementsByClassName("close")[0];
