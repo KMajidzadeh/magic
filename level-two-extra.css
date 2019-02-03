@@ -1,0 +1,16 @@
+#zone-3{
+    min-width: 100px;
+}
+.dropzone{
+    margin: 0px;
+}
+.spell-text{
+    min-height: 10px;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: large;
+}
+.spell-text .dropzone{
+    min-height: 30px;
+}

@@ -96,3 +96,46 @@ document.addEventListener("dragover", function(event) {
           // prevent default to allow drop
           event.preventDefault();
 }, false);
+
+var modal = document.getElementById("modal");
+var modalContent = document.getElementById("modal-content");
+
+function validateLevel(){
+ 
+    try{
+        var a = document.getElementById("zone-1").firstChild.id;
+        var b = document.getElementById("zone-2").firstChild.id;
+        var c = document.getElementById("zone-3").firstChild.id;
+
+        if(a == "spell-1" && b == "spell-2" && c == "spell-3"){
+            modalOutput("Congratulations! You saved the tree by calling out the spell HealTree(Oak); ")
+            var button = document.getElementById("progress-level");
+            button.style.display = "block";
+            return true;
+        }else{
+            modalOutput("This was not the correct spell! Please try again");
+            return false;
+        }
+    }catch(err){
+        modalOutput("You must fill in all the blanks! Please try again");
+        return false;
+    }
+}
+/*Opening a modal with input */
+function modalOutput(text){
+    modalContent.append(text);
+    modal.style.display = "block";
+    return false;   
+}
+/* Closing that annoying modal from earlier*/
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function(){
+    modal.style.display = "none";
+    modalContent.removeChild(modalContent.lastChild);
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      modalContent.removeChild(modalContent.lastChild);
+    }
+}
