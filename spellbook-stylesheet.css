@@ -1,6 +1,24 @@
+/*dropzones and spells */
+.dropzone{
+    background-color: #581825;
+    color: whitesmoke;
+}
+.spell{
+    background-color: #581845;
+    color: whitesmoke;
+ } 
+.spell-dragging{
+    background-color: #581845a4;
+    opacity: .75;
+}
+.entered-dropzone{
+    background-color: #993c7d;
+
+}
+/* containers */
 #spell-cast{
-    background-color: #900C3F
+    background-color: #F2D0B7;
 }
 #spell-book{
-    background-color: #581845
+    background-color: #ECC0A0;
 }
