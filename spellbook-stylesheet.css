@@ -7,14 +7,14 @@
     border-radius: 12px;
     min-width: 75px;
     min-height: 10px;
-    background-color: #581825;
+    background-color: #64143c;
     margin: 20px;
     display: inline-flex;
 }
 .spell{
     min-width: 75px;
     border-radius: 12px;
-    background-color: #581845;
+    background-color: #8a1d5a;
     color: whitesmoke;
     display: block;
     padding: 5px;
@@ -23,7 +23,7 @@
     text-align: center;
  } 
 .spell-dragging{
-    background-color: #581845a4;
+    background-color: #a12e7fa4;
     opacity: .75;
 }
 
@@ -45,9 +45,9 @@
 /* buttons */
 /* Cast Spell Button */
 .button{
-    color: #F2D0B7;
+    color: whitesmoke;
     border-radius: 12px;
-    background-color: forestgreen;
+    background-color: #30bd5f;
     min-width: 75px;
     margin: 20px;
     margin-left: 15px;
@@ -116,7 +116,12 @@
     font-size: x-small;
 }
 #event-text{
-    background-color: forestgreen;
-    color: #F2D0B7;
+    background-color: #30bd5f;
+    color: whitesmoke;
     text-align: center;
+    font-display: 'Times';
+}
+
+#modal-content{
+    top: 500px;
 }

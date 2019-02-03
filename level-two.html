@@ -11,10 +11,24 @@
         </style>
 </head>
 <body>
+    <img id = "sky" width="0" height="0" src="assets/sky.png">
+    <img id = "grass" width="0" height="0" src="assets/grass.png">
+    <img id = "treesSick" width="0" height="0" src="assets/treesSick.png">
+    <img id = "treesSick2" width="0" height="0" src="assets/treesSick2.png">
+    <img id = "treesSick3" width="0" height="0" src="assets/treesSick3.png">
+    <img id = "healthyTree" width="0" height="0" src="assets/1treehealth.png">
+    <img id = "clouds" width="0" height="0" src="assets/clouds.png">
+    <img id = "trees" width="0" height="0" src="assets/trees.png">
+    <img id = "wizard" width="0" height="0" src="assets/wizard.png">
 
     <div class = "container">
         <div class = "row">
-             <!-- This is where we will create the canvas -->
+            <div class="wrapper">
+                    <canvas id="levelTwoCanvas" width="800" height="480">
+                        <p>You're browser does not support the required functionality to play this game.</p>
+                        <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+                    </canvas>
+                </div>
          </div>
         <!--These columns will be auto-sorting, so they may appear next to or atop e.o.-->
         <div class = "row">
@@ -70,6 +84,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="spell-caster.js"></script>
+    <script type="text/javascript" src="levelTwo.js"></script>
 
 </body>
 </html>

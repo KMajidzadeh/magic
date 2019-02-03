@@ -10,10 +10,21 @@
         </style>
 </head>
 <body>
+    <img id = "sky" width="0" height="0" src="assets/sky.png">
+    <img id = "grass" width="0" height="0" src="assets/grass.png">
+    <img id = "1tree" width="0" height="0" src="assets/1tree.png">        
+    <img id = "clouds" width="0" height="0" src="assets/clouds.png">
+    <img id = "healthyTree" width="0" height="0" src="assets/1treehealth.png">
+    <img id = "wizard" width="0" height="0" src="assets/wizard.png">
 
     <div class = "container">
         <div class = "row">
-             <!-- This is where we will create the canvas -->
+            <div class="wrapper">
+                <canvas id="levelOneCanvas" width="800" height="480">
+                    <p>You're browser does not support the required functionality to play this game.</p>
+                    <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+                </canvas>
+            </div>
          </div>
         <!--These columns will be auto-sorting, so they may appear next to or atop e.o.-->
         <div class = "row">
@@ -58,7 +69,7 @@
                 <p>Hint: Try <i>dragging</i> and <i>dropping</i> your spells into the right containers!</p>
             </div>
             <div>
-                <a href="level-two.html" class="button" id="progress-level">Next Level</button>
+                <a href="level-two.html" class="button" id="progress-level" onclick="iterateState()">Next Level</button>
              </div>
         </div>
     </div>
@@ -67,6 +78,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="spell-caster.js"></script>
+    <script type="text/javascript" src="levelOne.js"></script>
 
 </body>
 </html>

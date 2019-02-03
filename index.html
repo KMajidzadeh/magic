@@ -1,69 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>The Magic of Code</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel='icon' href='wizard-favicon.png' type='image/x-icon'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-        <link rel="stylesheet" type = "text/css" href="spellbook-stylesheet.css">
-        </style>
+  <meta charset= "UTF-8"> </meta>
+  <title>Magic - Creative Coding Quest</title>
+  <link rel="stylesheet" href="magicccq.css" type="text/css" media="screen">
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
 </head>
 <body>
+    <img id="menu" width="0" height="0" src="assets/menu.png" style="border:1px solid">
+<img id="wizard" width="0" height="0" src="assets/wizard.png">  
 
-    <div class = "container">
-        <div class = "row">
-             <!-- This is where we will create the canvas -->
-         </div>
-        <!--These columns will be auto-sorting, so they may appear next to or atop e.o.-->
-        <div class = "row">
-            <div class = "col" id = "event-text">
-                <h3>Oh no! An <strong>Oak</strong> tree has fallen down! This is your spell book. If you say the ancient incantation in the right order, you can cast a spell to heal the tree!</h3>
-            </div>
-        </div>
-        <div class = "row">
-            <!--This is the place where content will be "dropped" and validated-->
-            <div class = "col" id="spell-cast">
-                <div class="dropzone" id = "zone-1"></div>
-                <div class="dropzone" id="zone-2"></div>
-                <div class="dropzone" id="zone-3"></div>
-                <button class="button" onclick="validateLevelOne()">Cast Spell</button>
-            </div>
-            <!-- This is the place where content is stored until it's dragged+dropped-->
-            <div class = "col" id="spell-book">
-                <div class="spell-dock"> 
-                    <div class="spell" draggable="true" id = "spell-3" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
-                        ); 
-                      </div> 
-                </div> 
-                <div class = "spell-dock">
-                    <div class="spell" draggable="true" id="spell-1" ondragstart="event.dataTransfer.setData('text/plain',null)">
-                        healTree(
-                    </div>
-                </div>
-                <div class = "spell-dock">
-                    <div class="spell" draggable="true" id="spell-2" ondragstart="event.dataTransfer.setData('text/plain',null)">
-                    Oak
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id = "modal" class = "modal">
-            <div id="modal-content">
-                <span class="close">&times;</span>
-            </div>
-        </div>
-        <div class = "row" id = "hint">
-            <div class = "col">
-                <p>Hint: Try <i>dragging</i> and <i>dropping</i> your spells into the right containers!</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <script src="spell-caster.js"></script>
-
+    <div class="wrapper">
+            
+            
+    <!-- <div id="menu" class="main">
+        <div id="progress">
+            <div id="percent">Downloading: <span id="p"></span></div>
+            <progress id="progress-bar" value="0"></progress>
+        </div> 
+      <div id="main">
+        <h1>Magic - Creative Coding Quest</h1>
+        <ul>
+          <li><a href="#" class="button play">Start Game</a></li>
+          <li><a href="#" class="button credits">Credits</a></li>
+        </ul>
+      </div>
+    </div> -->
+    <canvas id="canvas" width="800" height="480">
+      <p>You're browser does not support the required functionality to play this game.</p>
+      <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+    </canvas>
+    
+  </div>
+  <a href="levelOne.html">
+        <button class="button">Start Game</button>
+</a>
+  <script type="text/javascript" src="sus.js"></script>
 </body>
+
 </html>
+
+

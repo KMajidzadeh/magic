@@ -100,6 +100,19 @@ document.addEventListener("dragover", function(event) {
 var modal = document.getElementById("modal");
 var modalContent = document.getElementById("modal-content");
 
+function updateCanvas() {
+    console.log('UPATE CANVAS CALLED');
+    if(document.getElementById('levelOneCanvas') !== null){
+        console.log('updateLevelOne');
+        updateLevelOneCanvas();
+    }
+    else if(document.getElementById('levelTwoCanvas') !== null) {
+        console.log('updateLevelTwo');
+        updateLevelTwoCanvas();
+    }
+}
+
+
 function validateLevel(){
  
     try{
@@ -108,9 +121,11 @@ function validateLevel(){
         var c = document.getElementById("zone-3").firstChild.id;
 
         if(a == "spell-1" && b == "spell-2" && c == "spell-3"){
+            
             modalOutput("Congratulations! You saved the tree by calling out the spell HealTree(Oak); ")
             var button = document.getElementById("progress-level");
             button.style.display = "block";
+            updateCanvas();
             return true;
         }else{
             modalOutput("This was not the correct spell! Please try again");
