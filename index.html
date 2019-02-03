@@ -16,6 +16,11 @@
          </div>
         <!--These columns will be auto-sorting, so they may appear next to or atop e.o.-->
         <div class = "row">
+            <div class = "col" id = "event-text">
+                <h3>Oh no! An <strong>Oak</strong> tree has fallen down! This is your spell book. If you say the ancient incantation in the right order, you can cast a spell to heal the tree!</h3>
+            </div>
+        </div>
+        <div class = "row">
             <!--This is the place where content will be "dropped" and validated-->
             <div class = "col" id="spell-cast">
                 <div class="dropzone"></div>
@@ -25,13 +30,25 @@
             <!-- This is the place where content is stored until it's dragged+dropped-->
             <div class = "col" id="spell-book">
                 <div class="spell-dock"> 
-                    <div class="spell" class="spell-dragging" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
-                        Spell 
+                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
+                        ); 
                       </div> 
                 </div> 
-                <div class = "spell-dock"></div>
-                <div class = "spell-dock"></div>
-                <div class = "spell-dock"></div>
+                <div class = "spell-dock">
+                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                        healTree(
+                    </div>
+                </div>
+                <div class = "spell-dock">
+                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                    Oak
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row" id = "hint">
+            <div class = "col">
+                <p>Hint: Try <i>dragging</i> and <i>dropping</i> your spells into the right containers!</p>
             </div>
         </div>
     </div>

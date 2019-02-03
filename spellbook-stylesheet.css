@@ -4,28 +4,35 @@
 
 /*dropzones and spells */
 .dropzone{
-    border-radius: 25px;
-    background-color: #a15a8c;
-    padding: 5px;
+    border-radius: 12px;
+    background-color: #9e5488;
+    min-width: 75px;
     margin: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
     display: inline-flex;
 }
 .entered-dropzone{
-    border-radius: 25px;
-    background-color: #a05589;
+    min-width: 75px;
+    background-color: #9e688ee8;
 }
 .spell-dock{
-    border-radius: 25px;
+    border-radius: 12px;
+    min-width: 75px;
     background-color: #581825;
-    padding: 5px;
     margin: 20px;
     display: inline-flex;
 }
 .spell{
-    border-radius: 25px;
+    min-width: 75px;
+    border-radius: 12px;
     background-color: #581845;
     color: whitesmoke;
     display: block;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
  } 
 .spell-dragging{
     background-color: #581845a4;
@@ -40,4 +47,14 @@
 #spell-book{
     background-color: #ECC0A0;
     display: inline-flex;
+}
+
+/*Text*/
+#hint{
+    font-size: xx-small;
+}
+#event-text{
+    background-color: forestgreen;
+    color: #F2D0B7;
+    text-align: center;
 }
