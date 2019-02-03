@@ -97,7 +97,11 @@ document.addEventListener("dragover", function(event) {
           event.preventDefault();
 }, false);
 
+var modal = document.getElementById("modal");
+var modalContent = document.getElementById("modal-content");
+
 function validateLevelOne(){
+ 
     try{
         var a = document.getElementById("zone-1").firstChild.id;
         var b = document.getElementById("zone-2").firstChild.id;
@@ -106,12 +110,30 @@ function validateLevelOne(){
         var x = document.getElementById("spell-1");
         var y = document.getElementById("spell-2");
         var z = document.getElementById("spell-3");
-        console.log(a,b,c);
         if(a == "spell-1" && b == "spell-2" && c == "spell-3"){
-                return true;
+            modalContent.append("Congratulations! You saved the tree by casting the spell HealTree(Oak); ");
+            modal.style.display = "block"; 
+            return true;
+        }else{
+            modalContent.append("This was not the correct spell! Please try again");
+            modal.style.display = "block";
+            return false;
         }
+    }catch(err){
+        modalContent.append("You must fill in all the blanks! Please try again");
+        modal.style.display = "block";
         return false;
-    }catch(e){
-        return false;
+    }
+}
+/* Closing that annoying modal from earlier*/
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function(){
+    modal.style.display = "none";
+    modalContent.removeChild(modalContent.lastChild);
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      modalContent.removeChild(modalContent.lastChild);
     }
 }
