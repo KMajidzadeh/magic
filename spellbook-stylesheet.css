@@ -1,3 +1,7 @@
+/* .container {
+    background-color: white;
+} */
+
 /*dropzones and spells */
 .dropzone{
     border-radius: 25px;
@@ -16,7 +20,6 @@
     padding: 5px;
     margin: 20px;
     display: inline-flex;
-    float: left;
 }
 .spell{
     border-radius: 25px;

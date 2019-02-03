@@ -9,6 +9,7 @@
         </style>
 </head>
 <body>
+
     <div class = "container">
         <div class = "row">
              <!-- This is where we will create the canvas -->
@@ -17,12 +18,24 @@
         <div class = "row">
             <!--This is the place where content will be "dropped" and validated-->
             <div class = "col" id="spell-cast">
+                <div class="dropzone"></div>
+                <div class="dropzone"></div>
+                <div class="dropzone"></div>
             </div>
             <!-- This is the place where content is stored until it's dragged+dropped-->
             <div class = "col" id="spell-book">
+                <div class="spell-dock"> 
+                    <div class="spell" class="spell-dragging" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
+                        Spell 
+                      </div> 
+                </div> 
+                <div class = "spell-dock"></div>
+                <div class = "spell-dock"></div>
+                <div class = "spell-dock"></div>
             </div>
         </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
