@@ -1,0 +1,41 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+#menu.main {
+    background-image: url'assets/menu.png');
+}
+#main {
+    display:none;
+    height: 60%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+#main h1 {
+    color: white;
+    text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.button {
+    display: block;
+    width: 150 px;
+    margin: 0 auto;
+    height 30px;
+    line-height: 30px;
+    border: 1px solid saddlebrown;
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    background-color: #CD853F ;
+    background-image: -webkit-linear-gradient(bottom, peru 0%, sienna 100%);
+    background-image:         linear-gradient(to bottom, sienna 0%, peru 100%);
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: sienna;
+    background-image: -webkit-linear-gradient(bottom, sienna 0%, peru 100%);
+    background-image:         linear-gradient(to bottom, sienna 0%, peru 100%)
+}
+}
