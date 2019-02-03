@@ -2,20 +2,7 @@
     background-color: white;
 } */
 
-/*dropzones and spells */
-.dropzone{
-    border-radius: 12px;
-    background-color: #9e5488;
-    min-width: 75px;
-    margin: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    display: inline-flex;
-}
-.entered-dropzone{
-    min-width: 75px;
-    background-color: #9e688ee8;
-}
+/*spells and spell docks */
 .spell-dock{
     border-radius: 12px;
     min-width: 75px;
@@ -37,6 +24,32 @@
 .spell-dragging{
     background-color: #581845a4;
     opacity: .75;
+}
+
+/*dropzones */
+.dropzone{
+    border-radius: 12px;
+    background-color: #9e5488;
+    min-width: 75px;
+    margin: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-flex;
+}
+.entered-dropzone{
+    min-width: 75px;
+    background-color: #9e688ee8;
+}
+
+/* Cast Spell Button */
+.button{
+    color: #F2D0B7;
+    border-radius: 12px;
+    background-color: forestgreen;
+    min-width: 75px;
+    margin: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
 }
 
 /* containers */

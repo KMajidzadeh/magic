@@ -96,3 +96,22 @@ document.addEventListener("dragover", function(event) {
           // prevent default to allow drop
           event.preventDefault();
 }, false);
+
+function validateLevelOne(){
+    try{
+        var a = document.getElementById("zone-1").firstChild.id;
+        var b = document.getElementById("zone-2").firstChild.id;
+        var c = document.getElementById("zone-3").firstChild.id;
+
+        var x = document.getElementById("spell-1");
+        var y = document.getElementById("spell-2");
+        var z = document.getElementById("spell-3");
+        console.log(a,b,c);
+        if(a == "spell-1" && b == "spell-2" && c == "spell-3"){
+                return true;
+        }
+        return false;
+    }catch(e){
+        return false;
+    }
+}
