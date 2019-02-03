@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <title>The Magic of Code</title>
         <meta charset="utf-8" />
-        <title>Canvas Workshop</title>
-        <style>
-            * { padding: 0; margin: 0; }
-            canvas { background: #eee; display: block; margin: 0 auto; }
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type = "text/css" href="spellbook-stylesheet.css">
         </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="480" height="320"></canvas>
-    <script src="bouncy-game.js"></script>
+
+    <div class = "container">
+        <div class = "row">
+             <!-- This is where we will create the canvas -->
+         </div>
+        <!--These columns will be auto-sorting, so they may appear next to or atop e.o.-->
+        <div class = "row">
+            <div class = "col" id = "event-text">
+                <h3>Oh no! An <strong>Oak</strong> tree has fallen down! This is your spell book. If you say the ancient incantation in the right order, you can cast a spell to heal the tree!</h3>
+            </div>
+        </div>
+        <div class = "row">
+            <!--This is the place where content will be "dropped" and validated-->
+            <div class = "col" id="spell-cast">
+                <div class="dropzone"></div>
+                <div class="dropzone"></div>
+                <div class="dropzone"></div>
+            </div>
+            <!-- This is the place where content is stored until it's dragged+dropped-->
+            <div class = "col" id="spell-book">
+                <div class="spell-dock"> 
+                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', null)"> 
+                        ); 
+                      </div> 
+                </div> 
+                <div class = "spell-dock">
+                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                        healTree(
+                    </div>
+                </div>
+                <div class = "spell-dock">
+                    <div class="spell" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                    Oak
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "row" id = "hint">
+            <div class = "col">
+                <p>Hint: Try <i>dragging</i> and <i>dropping</i> your spells into the right containers!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="spell-caster.js"></script>
+
 </body>
 </html>
